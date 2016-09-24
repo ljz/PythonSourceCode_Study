@@ -1,0 +1,1 @@
+/home/duoyi/文档/pythonstudy/Python-2.5/Modules/_ctypes/libffi/include/ffi_common.h

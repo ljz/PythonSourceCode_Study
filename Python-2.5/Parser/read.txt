@@ -1,0 +1,1 @@
+包含了Python解释其的Scaner，Parser两部分，即对python源码进行词法分析和语法分析的部分。除了这些Parser目录下还有一些有用的工具，这些工具能够根据Python语言的语法自动成成python语言的词法和语法分析其，与YACC非常类似。
