@@ -1,1 +1,0 @@
-包含了Python解释器的Compiler和执行引擎部分，是Python运行的核心所在。
