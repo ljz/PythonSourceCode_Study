@@ -38,8 +38,8 @@ if 1:
         ffi_platforms[pn] = all_darwin_files
     del all_darwin, all_darwin_files, pn
 
-ffi_srcdir = '/home/duoyi/文档/pythonstudy/Python-2.5/Modules/_ctypes/libffi'
+ffi_srcdir = '/home/duoyi/Document/pythonstudy/Python-2.5/Modules/_ctypes/libffi'
 ffi_sources += ffi_platforms['X86_64']
-ffi_sources = [os.path.join('/home/duoyi/文档/pythonstudy/Python-2.5/Modules/_ctypes/libffi', f) for f in ffi_sources]
+ffi_sources = [os.path.join('/home/duoyi/Document/pythonstudy/Python-2.5/Modules/_ctypes/libffi', f) for f in ffi_sources]
 
 ffi_cflags = ''

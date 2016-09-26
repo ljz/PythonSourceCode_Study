@@ -77,7 +77,7 @@ PY_CFLAGS=	$(CFLAGS) $(CPPFLAGS) $(CFLAGSFORSHARED) -DPy_BUILD_CORE
 MACHDEP=	linux3
 
 # Install prefix for architecture-independent files
-prefix=		/home/duoyi/文档/pythonstudy/pythoninstall
+prefix=		/home/duoyi/Document/pythonstudy/pythoninstall
 
 # Install prefix for architecture-dependent files
 exec_prefix=	${prefix}
@@ -132,7 +132,7 @@ EXEMODE=	755
 FILEMODE=	644
 
 # configure script arguments
-CONFIG_ARGS=	'-prefix=/home/duoyi/文档/pythonstudy/pythoninstall'
+CONFIG_ARGS=	'-prefix=/home/duoyi/Document/pythonstudy/pythoninstall' 'enable-shared' 'build_alias=enable-shared' 'host_alias=enable-shared' 'target_alias=enable-shared'
 
 
 # Subdirectories with code

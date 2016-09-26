@@ -101,13 +101,15 @@ PyList_New(Py_ssize_t size)
 		_Py_NewReference((PyObject *)op);
 	} else {
 		op = PyObject_GC_New(PyListObject, &PyList_Type);
+		//deng xiao yu === PyListObject* op = new PyList_Type();	
+
 		if (op == NULL)
 			return NULL;
 	}
 	if (size <= 0)
 		op->ob_item = NULL;
 	else {
-		op->ob_item = (PyObject **) PyMem_MALLOC(nbytes);
+		op->ob_item = (PyObject **) PyMem_MALLOC(nbytes);//op->ob_item = (PyObject **) malloc(nbytes);
 		if (op->ob_item == NULL) {
 			Py_DECREF(op);
 			return PyErr_NoMemory();

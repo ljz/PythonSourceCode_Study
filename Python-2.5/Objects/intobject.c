@@ -426,7 +426,10 @@ static int
 int_print(PyIntObject *v, FILE *fp, int flags)
      /* flags -- not used but required by interface */
 {
-	fprintf(fp, "%ld", v->ob_ival);
+	PyObject *str = PyString_FromString("i am in int_print");
+	PyObject_Print(str, stdout, 0);
+	printf("\n");
+	fprintf(fp, "%ld",v->ob_ival);
 	return 0;
 }
 
@@ -435,6 +438,13 @@ int_repr(PyIntObject *v)
 {
 	char buf[64];
 	PyOS_snprintf(buf, sizeof(buf), "%ld", v->ob_ival);
+	if (PyInt_AsLong(v) == -999){//python int obj translate to C languang int value
+		PyObject *str = PyString_FromString("i am i int_repr");//translate to Python obj
+		PyObject *out = PySys_GetObject("stdout");//get stdout obj in C
+		if(out != NULL){
+			PyObject_Print(str, stdout, 0);// chong ding xiang dao biao zhun shu chu.
+		}
+	}
 	return PyString_FromString(buf);
 }
 
